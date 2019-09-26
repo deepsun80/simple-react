@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import Root from "./Root";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 ReactDOM.render(
   <Router>
-    <Route exact path="/" render={() => <Redirect to="/app" />} />
+    <Route exact path="/" component={Root} />
     <Route path="/app" component={App} />
   </Router>,
   document.getElementById("root")
